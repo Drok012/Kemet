@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;  /* הכפתורים יהיו בתחתית הדף */
+  height: 100vh;  /* גובה הדפדפן */
+  background-image: url('images/Kemet blood and sand.png');
+  background-size: contain;  /* התמונה תתאים לגובה, ולא תגדל מעבר לכך */
+  background-position: center center;  /* התמונה ממורכזת במרכז */
+  background-repeat: no-repeat;  /* מונע חזרה של התמונה */
+  background-color: black;  /* צבע הרקע יהיה שחור אם יש עודף בצדדים */
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 20px;  /* המרחק התחתון מהקצה */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+button {
+  background-color: rgba(255, 165, 0, 0.8);  /* צבע צהוב/כתום */
+  border: 3px solid #fff;  /* מסגרת לבנה להבלטת הכפתור */
+  color: white;
+  padding: 20px 40px;
+  margin: 10px;
+  font-size: 24px;  /* טקסט גדול יותר */
+  cursor: pointer;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  /* הצללה */
+}
+
+button:hover {
+  background-color: rgba(255, 215, 0, 0.8);  /* צבע כתום חזק יותר */
+  color: black;
+}
+
+button:focus {
+  outline: none;  /* מסיר את קו המיקוד */
+}
