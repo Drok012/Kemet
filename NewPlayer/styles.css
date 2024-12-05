@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* מרכז את התוכן אופקית */
+  align-items: center; /* מרכז את התוכן אנכית */
+  height: 100vh; /* גובה הדף יהיה גובה החלון */
+  background-image: url('../images/Kemet blood and sand.png'); /* תמונת רקע */
+  background-size: contain; /* התמונה תתאים לתוך הדף, תשמור על פרופורציות */
+  background-position: center center; /* התמונה תישאר במרכז */
+  background-repeat: no-repeat; /* התמונה לא תחזור */
+  background-color: black; /* אם אין תמונה, רקע שחור */
+  font-family: Arial, sans-serif; /* גופן כללי */
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.7); /* רקע כהה למחיצה הפנימית */
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px; /* רוחב הקונטיינר */
+  text-align: center; /* טקסט ממורכז */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* הצללה רכה */
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  border: 3px solid white; /* מסגרת לבנה */
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* כל השדות יהיו בעמודה */
+  justify-content: flex-start; /* מוודא שהתוכן מתחיל מלמעלה */
+  align-items: center; /* מוודא שהשדות ממורכזים */
+}
+
+label {
+  margin: 10px 0;
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  width: 100%; /* מבטיח שהטקסט יישאר בשורה אחת */
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  font-size: 14px;
+  width: 100%; /* השדה יימתח לכל רוחב הקונטיינר */
+}
+
+button {
+  background-color: rgba(255, 165, 0, 0.8); /* צבע רקע צהוב/כתום */
+  border: 3px solid #fff; /* גבול לבן */
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* הצללה */
+  width: 100%; /* הכפתור יתפוס את כל רוחב הקונטיינר */
+}
+
+button:hover {
+  background-color: rgba(255, 215, 0, 0.8); /* שינוי צבע כפתור בהובר */
+}
+
+#error-message {
+  margin-top: 15px;
+}
