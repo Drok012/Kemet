@@ -17,14 +17,23 @@
     </form>
 
     <script>
+        let existingData = ''; // משתנה לאחסון המידע הקיים
+
         document.getElementById("data-form").addEventListener("submit", function (event) {
             event.preventDefault(); // מונע את שליחת הטופס הרגילה
             
             // קבלת הערך שהוזן בשדה הקלט
             const inputData = document.getElementById("inputData").value;
 
-            // יצירת אובייקט Blob עם המידע שהוזן
-            const blob = new Blob([inputData], { type: 'text/plain' });
+            // אם יש כבר מידע, הוסף את המידע החדש אליו
+            if (existingData) {
+                existingData += '\n' + inputData; // הוספת מידע חדש לקובץ הקיים
+            } else {
+                existingData = inputData; // אם אין מידע קודם, הוסף את המידע הראשון
+            }
+
+            // יצירת אובייקט Blob עם המידע (כולל כל המידע הקודם)
+            const blob = new Blob([existingData], { type: 'text/plain' });
             const link = document.createElement('a');
             
             // יצירת כתובת URL עבור הקובץ
