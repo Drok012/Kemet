@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Player</title>
+    <link rel="stylesheet" href="styles.css"> <!-- לינק ל-CSS -->
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create a New Player</h2> <!-- כותרת לעמוד -->
+        <form id="new-player-form">
+            <label for="username">Username (this is how the player will appear):</label> <!-- שדה שם משתמש עם הסבר -->
+            <input type="text" id="username" name="username" required> <!-- שדה שם משתמש (חובה) -->
+            
+            <label for="email">Email (for identification only):</label> <!-- שדה אימייל -->
+            <input type="email" id="email" name="email" required> <!-- שדה אימייל (חובה) -->
+            
+            <label for="password">Password (can be 0 characters):</label> <!-- שדה סיסמה עם הסבר -->
+            <input type="password" id="password" name="password"> <!-- שדה סיסמה (יכולה להיות 0 אותיות) -->
+            
+            <button type="submit">Register</button> <!-- כפתור הרשמה -->
+        </form>
+        <div id="error-message" style="color: red; display: none;">This email is already registered.</div> <!-- הודעה במקרה של שגיאה -->
+    </div>
+
+    <script src="script.js"></script> <!-- לינק לקובץ ה-JavaScript -->
+</body>
+</html>
