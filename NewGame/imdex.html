@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Data to TXT</title>
+</head>
+<body>
+
+    <h1>Enter Information</h1>
+    
+    <!-- טופס עם שדה קלט וכפתור שליחה -->
+    <form id="data-form">
+        <label for="inputData">Enter text:</label>
+        <input type="text" id="inputData" name="inputData" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("data-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // מונע את שליחת הטופס הרגילה
+            
+            // קבלת הערך שהוזן בשדה הקלט
+            const inputData = document.getElementById("inputData").value;
+
+            // יצירת אובייקט Blob עם המידע שהוזן
+            const blob = new Blob([inputData], { type: 'text/plain' });
+            const link = document.createElement('a');
+            
+            // יצירת כתובת URL עבור הקובץ
+            link.href = URL.createObjectURL(blob);
+            link.download = 'user_data.txt'; // שם הקובץ שייווצר
+
+            // הדמיית לחיצה על הקישור כדי להוריד את הקובץ
+            link.click();
+        });
+    </script>
+
+</body>
+</html>
