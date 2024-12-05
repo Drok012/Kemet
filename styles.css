@@ -9,7 +9,7 @@ body {
   background-size: contain;  /* התמונה תתאים לגובה, ולא תגדל מעבר לכך */
   background-position: center center;  /* התמונה ממורכזת במרכז */
   background-repeat: no-repeat;  /* מונע חזרה של התמונה */
-  background-color: black;  /* צבע הרקע יהיה שחור אם יש עודף בצדדים */
+  background-color: #808080;  /* צבע הרקע יהיה שחור אם יש עודף בצדדים */
   font-family: Arial, sans-serif;
   color: white;
 }
